@@ -5,11 +5,12 @@ try:
     y1 = int(input("Введите y1 (1-8): "))
     x2 = int(input("Введите x2 (1-8): "))
     y2 = int(input("Введите y2 (1-8): "))
+except ValueError:
+    print("Неправильно ввели! Нужны целые числа.")
+else:
     if min(x1, y1, x2, y2) < 1 or max(x1, y1, x2, y2) > 8:
         print("Координаты должны быть от 1 до 8!")
     elif x1 == x2 and y1 == y2:
         print("Поля должны быть различными!")
     else:
         print(x1 == x2 or y1 == y2)
-except ValueError:
-    print("Неправильно ввели! Нужны целые числа.")
